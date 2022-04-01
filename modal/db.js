@@ -1,12 +1,13 @@
 const mysql=require('mysql');
+const sqlInfo = require("../aliyunSql")
 const pool=mysql.createPool({
-    // host:'localhost',
-    host:"121.40.223.192",
-    port:3306,
-    password:'Lfs@6810..',
-    database:'shopapp',
-    connectionLimit:10,
-    user:'root'
+    // host:"",
+    // port:3306,
+    // password:'',
+    // database:'',
+    // connectionLimit:10,
+    // user:'root'
+    ...sqlInfo
 })
 
 const query = (sql, param) => {

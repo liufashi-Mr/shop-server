@@ -14,3 +14,5 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+aliyunSql.js
