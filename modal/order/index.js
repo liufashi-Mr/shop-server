@@ -1,5 +1,5 @@
 const router = require('../../controller/order');
-const query = require('../db');
+const query = require('../../db');
 
 // 插入订单表后在操作订单详情表
 const addOrderDetail = (insertDetail, skus, id) => {

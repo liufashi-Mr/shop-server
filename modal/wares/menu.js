@@ -1,6 +1,6 @@
 const { reject } = require('underscore');
 const { param } = require('../../controller/order');
-const query = require('../db');
+const query = require('../../db');
 
 const getMenu = (sql, param) => {
     return new Promise((resolve, reject) => {

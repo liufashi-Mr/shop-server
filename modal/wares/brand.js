@@ -1,4 +1,4 @@
-const query = require('../db');
+const query = require('../../db');
 
 const getBrand = (sql, param) => {
     return new Promise((resolve, reject) => {

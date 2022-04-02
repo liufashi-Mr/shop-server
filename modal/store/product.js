@@ -1,5 +1,5 @@
 const { param } = require('../../controller/wares/menu');
-const query = require('../db');
+const query = require('../../db');
 
 
 // 在插入产品表之前先查询

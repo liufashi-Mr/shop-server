@@ -1,4 +1,4 @@
-const query = require("../db");
+const query = require("../../db");
 
 const addRating = (sql, param) => {
     return new Promise((resolve, reject) => {

@@ -1,4 +1,4 @@
-const query=require('../db');
+const query=require('../../db');
 
 // 添加快递
 const addDelivery=(sql,param)=>{

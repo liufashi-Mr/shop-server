@@ -1,4 +1,4 @@
-const query = require('../db');
+const query = require('../../db');
 const { getToken } = require('../../utils/token')
 // 用于检测用户注册时用户名是否已经存在
 const checkRegister = (param) => {

@@ -1,5 +1,5 @@
 const { reject } = require('underscore');
-const query=require('../db');
+const query=require('../../db');
 
 // 新增收货地址
 const addAddress=(sql,param)=>{
