@@ -1,10 +1,14 @@
 const express = require("express");
 const app = express();
+const port = 3000;
+const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const port = 3000;
+const history = require("connect-history-api-fallback");
 app.use(cors());
+app.use(history());
 const { verify } = require("./utils/token");
+app.use(express.static(path.join(__dirname, "dist")));
 
 // 引入商家的用户路由模块
 const storeUser = require("./controller/store/user");
@@ -98,5 +102,5 @@ app.use("/login", msgSend);
 app.use("/type", type);
 app.use("/upload", upload);
 app.listen(port, () => {
-  console.log(port + "的端口启动了");
+  console.log(port+"的端口启动了");
 });
