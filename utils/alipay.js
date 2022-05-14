@@ -1,7 +1,7 @@
 const AlipaySdk = require('alipay-sdk').default; // 引入 SDK
 const AlipayFormData = require("alipay-sdk/lib/form").default
 const formData = new AlipayFormData();
-formData.addField('notifyUrl', 'http://localhost:8080/paySuccess')
+formData.addField("notifyUrl", "https://expo.liufashi.top/paySuccess");
 formData.setMethod('get');
 const payOrder =async function ({outTradeNo,totalAmount,subject,body}) {
     formData.addField('bizContent', {
@@ -12,7 +12,7 @@ const payOrder =async function ({outTradeNo,totalAmount,subject,body}) {
         body, // 订单描述
 
     });
-    formData.addField('returnUrl', 'http:///localhost:8080/paySuccess');//加在这里才有效果,不是加在
+    formData.addField('returnUrl', 'https://expo.liufashi.top/paySuccess');//加在这里才有效果,不是加在
     const alipaySdk = new AlipaySdk({
         appId: '2021000117640960', // 开放平台上创建应用时生成的 appId
         signType: 'RSA2', // 签名算法,默认 RSA2
